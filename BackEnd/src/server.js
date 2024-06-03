@@ -1,10 +1,29 @@
 const express = require('express');
 const app = express();
 
+
+const cre = `░█▀▀░█▀▄░█▀▀░█▀█░▀█▀░█▀▀░█▀▄░░░█▀▄░█░█
+░█░░░█▀▄░█▀▀░█▀█░░█░░█▀▀░█░█░░░█▀▄░░█░
+░▀▀▀░▀░▀░▀▀▀░▀░▀░░▀░░▀▀▀░▀▀░░░░▀▀░░░▀░`
+const str = `░█▀▀░▀█▀░█▀▄░█▀▀░█▀█░█▄█░▀█▀░█░░░█░█
+░▀▀█░░█░░█▀▄░█▀▀░█▀█░█░█░░█░░█░░░░█░
+░▀▀▀░▀▀▀░▀░▀░▀░░░▀░▀░▀░▀░▀▀▀░▀▀▀░░▀░`
+const line =`░▀▄░░▀▄░░▀▄░░▀▄░░▀▄░░░▄▀░░▄▀░░▄▀░░▄▀░░▄▀
+░░▄▀░░▄▀░░▄▀░░▄▀░░▄▀░▀▄░░▀▄░░▀▄░░▀▄░░▀▄░
+░▀░░░▀░░░▀░░░▀░░░▀░░░░░▀░░░▀░░░▀░░░▀░░░▀`
+
+
+
 app.get('/', (req, res) => {
   res.json({ message: 'Ahoy!' });
 });
 
 app.listen(9000, () => {
-  console.log('Application is running on port 9000');
+  console.log(line)
+  console.log(cre)
+  console.log(str)
+  console.log(line)
+  console.log("----------------------------------------")
+  console.log("  Server Run On" + " http://localhost:" + 9000)
+  console.log("----------------------------------------")
 });
