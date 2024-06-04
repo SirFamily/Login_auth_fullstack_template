@@ -1,4 +1,4 @@
-    const prisma = require("../config/pirsma");
+const prisma = require("../config/pirsma");
 
 exports.createUser = (userId, email, hashedPassword) => {
 
@@ -8,7 +8,7 @@ exports.createUser = (userId, email, hashedPassword) => {
             email,
             password: hashedPassword,
         }
-        
+
     })
 }
 

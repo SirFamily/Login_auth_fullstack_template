@@ -2,7 +2,7 @@ const createError = require("../utils/createError");
 const bcrypt = require('bcrypt');
 const userService = require("../service/userService");
 const { v4: uuidv4 } = require("uuid");
-const jwt = require("jsonwebtoken"); // Add this line to import the jsonwebtoken library
+const jwt = require("jsonwebtoken");
 
 exports.register = async (req, res, next) => {
     try {
