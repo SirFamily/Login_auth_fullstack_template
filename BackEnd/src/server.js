@@ -2,9 +2,10 @@ require('dotenv').config()
 const express = require('express');
 const cors = require('cors')
 const app = express();
-
 app.use(cors())
 app.use(express.json())
+
+const authRoute = require("./routers/auth-route")
 
 const cre = `░█▀▀░█▀▄░█▀▀░█▀█░▀█▀░█▀▀░█▀▄░░░█▀▄░█░█
 ░█░░░█▀▄░█▀▀░█▀█░░█░░█▀▀░█░█░░░█▀▄░░█░
@@ -18,9 +19,8 @@ const line =`░▀▄░░▀▄░░▀▄░░▀▄░░▀▄░░░�
 
 
 
-app.get('/', (req, res) => {
-  res.json({ message: 'Ahoy!' });
-});
+app.use("/auth",authRoute)
+
 const port = process.env.PORT
 app.listen(9000, () => {
   console.log(line)
