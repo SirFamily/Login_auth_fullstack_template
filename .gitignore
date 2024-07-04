@@ -1,5 +1,5 @@
 /BackEnd/node_modules
-/BackEnd/.env
+# /BackEnd/.env
 
 # Logs
 logs
